@@ -1,6 +1,16 @@
+class Country {
+  String name;
+  String dialCode;
+  String isoCode;
+  Country.from(Map<String, String> map)
+      : name = map['name'] ?? '',
+        dialCode = map['dialCode'] ?? '',
+        isoCode = map['isoCode'] ?? '';
+}
+
 class Countries {
-  static List<Map<String, String>> get list => _list;
-  static final List<Map<String, String>> _list = [
+  static List<Country> get list => _list;
+  static final List<Country> _list = [
     {"name": "Afghanistan", "dialCode": "+93", "isoCode": "AF"},
     {"name": "Aland Islands", "dialCode": "+358", "isoCode": "AX"},
     {"name": "Albania", "dialCode": "+355", "isoCode": "AL"},
@@ -81,7 +91,11 @@ class Countries {
     {"name": "Eritrea", "dialCode": "+291", "isoCode": "ER"},
     {"name": "Estonia", "dialCode": "+372", "isoCode": "EE"},
     {"name": "Ethiopia", "dialCode": "+251", "isoCode": "ET"},
-    {"name": "Falkland Islands (Malvinas)", "dialCode": "+500", "isoCode": "FK"},
+    {
+      "name": "Falkland Islands (Malvinas)",
+      "dialCode": "+500",
+      "isoCode": "FK"
+    },
     {"name": "Faroe Islands", "dialCode": "+298", "isoCode": "FO"},
     {"name": "Fiji", "dialCode": "+679", "isoCode": "FJ"},
     {"name": "Finland", "dialCode": "+358", "isoCode": "FI"},
@@ -105,7 +119,11 @@ class Countries {
     {"name": "Guinea-Bissau", "dialCode": "+245", "isoCode": "GW"},
     {"name": "Guyana", "dialCode": "+595", "isoCode": "GY"},
     {"name": "Haiti", "dialCode": "+509", "isoCode": "HT"},
-    {"name": "Holy See (Vatican City State)", "dialCode": "+379", "isoCode": "VA"},
+    {
+      "name": "Holy See (Vatican City State)",
+      "dialCode": "+379",
+      "isoCode": "VA"
+    },
     {"name": "Honduras", "dialCode": "+504", "isoCode": "HN"},
     {"name": "Hong Kong", "dialCode": "+852", "isoCode": "HK"},
     {"name": "Hungary", "dialCode": "+36", "isoCode": "HU"},
@@ -134,7 +152,11 @@ class Countries {
       "dialCode": "+850",
       "isoCode": "KP"
     },
-    {"name": "Korea, Republic of South Korea", "dialCode": "+82", "isoCode": "KR"},
+    {
+      "name": "Korea, Republic of South Korea",
+      "dialCode": "+82",
+      "isoCode": "KR"
+    },
     {"name": "Kuwait", "dialCode": "+965", "isoCode": "KW"},
     {"name": "Kyrgyzstan", "dialCode": "+996", "isoCode": "KG"},
     {"name": "Laos", "dialCode": "+856", "isoCode": "LA"},
@@ -291,5 +313,5 @@ class Countries {
     {"name": "Yemen", "dialCode": "+967", "isoCode": "YE"},
     {"name": "Zambia", "dialCode": "+260", "isoCode": "ZM"},
     {"name": "Zimbabwe", "dialCode": "+263", "isoCode": "ZW"}
-  ];
+  ].map((e) => Country.from(e)).toList();
 }

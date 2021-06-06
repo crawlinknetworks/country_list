@@ -1,3 +1,6 @@
+## 0.0.4
+*  Country Model Added
+
 ## 0.0.3
 
 *  Data Update

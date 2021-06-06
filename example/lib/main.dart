@@ -40,11 +40,11 @@ class _MyHomePageState extends State<MyHomePage> {
           child: ListView.builder(
             itemCount: Countries.list.length,
             itemBuilder: (_, position) {
-              Map<String, String> country = Countries.list[position];
+              Country country = Countries.list[position];
               return ListTile(
-                leading: Text(country['dialCode'] ?? ''),
-                title: Text(country['name'] ?? ''),
-                subtitle: Text(country['isoCode'] ?? ''),
+                leading: Text(country.dialCode),
+                title: Text(country.name),
+                subtitle: Text(country.isoCode),
               );
             },
           ),
