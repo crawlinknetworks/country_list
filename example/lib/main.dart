@@ -42,9 +42,9 @@ class _MyHomePageState extends State<MyHomePage> {
             itemBuilder: (_, position) {
               Map<String, String> country = Countries.list[position];
               return ListTile(
-                leading: Text(country['dial'] ?? ''),
+                leading: Text(country['dialCode'] ?? ''),
                 title: Text(country['name'] ?? ''),
-                subtitle: Text(country['alpha2'] ?? ''),
+                subtitle: Text(country['isoCode'] ?? ''),
               );
             },
           ),

@@ -1,6 +1,6 @@
 name: country_list
-description: A dart library provides a list of country data like Country Name (`name`), Country Phone Dial Code (`dial`), Country Alpha-2 Code (`alpha2`).
-version: 0.0.2
+description: A dart library provides a list of country data like Country Name, Dial Code, ISO Code.
+version: 0.0.3
 homepage: https://crawlink.com
 repository: https://github.com/crawlinknetworks/country_list
 git: https://github.com/crawlinknetworks/country_list

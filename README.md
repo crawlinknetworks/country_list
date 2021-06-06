@@ -1,6 +1,6 @@
 # country_list
 
-A dart library provides a list of country data like Country Name (`name`), Country Phone Dial Code (`dial`), Country Alpha-2 Code (`alpha2`).
+A dart library provides a list of country data like Country Name, Dial Code, ISO Code.
 
 ## Getting Started
 
@@ -25,9 +25,9 @@ ListView.builder(
     itemBuilder: (_, position) {
         Map<String, String> country = Countries.list[position];
         return ListTile(
-        leading: Text(country['dial'] ?? ''),
+        leading: Text(country['dialCode'] ?? ''),
         title: Text(country['name'] ?? ''),
-        subtitle: Text(country['alpha2'] ?? ''),
+        subtitle: Text(country['isoCode'] ?? ''),
         );
     },
 ),
