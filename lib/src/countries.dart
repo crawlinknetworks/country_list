@@ -2,6 +2,36 @@ class Country {
   String name;
   String dialCode;
   String isoCode;
+
+  Country.empty()
+      : name = '',
+        dialCode = "",
+        isoCode = '';
+
+  Country.isoCode(String isoCode)
+      : name = '',
+        dialCode = "",
+        isoCode = '' {
+    Country? country = Countries.list.firstWhere(
+        (element) => element.isoCode == isoCode,
+        orElse: () => Country.empty());
+    name = country.name;
+    dialCode = country.dialCode;
+    isoCode = country.isoCode;
+  }
+
+  Country.dialCode(String dialCode)
+      : name = '',
+        dialCode = "",
+        isoCode = '' {
+    Country? country = Countries.list.firstWhere(
+        (element) => element.dialCode == dialCode,
+        orElse: () => Country.empty());
+    name = country.name;
+    dialCode = country.dialCode;
+    isoCode = country.isoCode;
+  }
+
   Country.from(Map<String, String> map)
       : name = map['name'] ?? '',
         dialCode = map['dialCode'] ?? '',
