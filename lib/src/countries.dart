@@ -36,6 +36,11 @@ class Country {
       : name = map['name'] ?? '',
         dialCode = map['dialCode'] ?? '',
         isoCode = map['isoCode'] ?? '';
+
+  @override
+  String toString() {
+    return '{name: $name, isoCode: $isoCode, dialCode: $dialCode}';
+  }
 }
 
 class Countries {
